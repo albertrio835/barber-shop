@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      ul {
+         width: 70%;
+         display: flex;
+         justify-content: space-between;
+      }
+
+      li {
+         list-style-type: none;
+      }
+
+      a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .nav {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .home {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         /* border: 3px solid red; */
+         height: 600px;
+      }
+
+      .round {
+         position: relative;
+         /* left: -200px; */
+         width: 400px;
+         /* padding: 20px; */
+      }
+
+      .a1 {
+         position: absolute;
+         /* left: 10px; */
+         z-index: 0;
+      }
+
+      .a2 {
+         position: absolute;
+         left: 60px;
+         z-index: 1;
+      }
+
+      .a3 {
+         position: absolute;
+         left: 140px;
+         z-index: 2;
+      }
+
+      .a4 {
+         position: absolute;
+         left: 220px;
+         z-index: 3;
+      }
+
+      .round img {
+         border-radius: 50%;
+         display: inline;
+         border: 2px solid black;
+      }
+
+      .right {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+      }
+
+      .right h1 {
+         font-size: 60px;
+         padding: 10px;
+         text-align: center;
+      }
+
+      .review {
+         display: flex;
+      }
+
+      .client {
+         /* border: 2px solid red; */
+         height: auto;
+      }
+
+      /* .ten{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            margin: 50px;
+          }
+          .one{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 50px;
+           align-items: center;
+          } */
+      .two {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+      }
+
+      .ben {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .jack1 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 13.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+
+      .jack2 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 2.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+
+      .jack3 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 3.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: whitesmoke;
+      }
+
+      .jack4 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 4.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+         
+      }
+
+      .jack {
+         display: flex;
+         justify-content: space-evenly;
+      }
+
+      .dot {
+         display: flex;
+         padding: 20px;
+      }
+
+      .zero {
+         width: 650px;
+         padding: 20px;
+      }
+
+      .bike {
+         display: flex;
+         padding: 20px;
+      }
+
+      .car {
+         width: 650px;
+         padding: 20px;
+      }
+
+      .albert1 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 5.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+      .skylines{
+          width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 13.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+
+      }
+
+      .albert2 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 8.jpg);
+        background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+      .skylines2{
+          width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 11.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+         
+      }
+
+      .albert3 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 9.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+      .skylines3{
+          width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 12.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+
+      .albert4 {
+         width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 10.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+      .skylines4{
+          width: 250px;
+         height: 350px;
+         border-radius: 20px;
+         padding-inline: 20px;
+         background-image: url(./barber\ 6.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         align-content: end;
+         font-size: 25px;
+         font-weight: 900;
+         padding-bottom: 20px;
+         color: white;
+      }
+
+
+      .albert {
+         display: flex;
+         justify-content: space-evenly;
+      }
+
+      .ken {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 10px;
+         background-color: black;
+         padding: 20px;
+         text-align: center;
+         color: white;
+         margin: 20px;
+         border-radius: 20px;
+      }
+
+      .css {
+         margin: 25px;
+         border-radius: 20px;
+         position: relative;
+         overflow: hidden;
+         height: 300px;
+         font-size: 25px;
+         padding: 40px;
+         background: url(./barber\ 3.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         color: white;
+      }
+
+      .spi {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .spi a{
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <div class="nav">
+      <h1>Sharp cuts</h1>
+      <ul>
+         <li><a href="">home</a></li>
+         <li><a href="">about</a></li>
+         <li><a href="">services</a></li>
+         <li><a href="">our barbers</a></li>
+         <li><a href="">gallery</a></li>
+         <li><a href="">contact</a></li>
+         <li><button>Book Now</button></li>
+      </ul>
+   </div>
+
+   <!-- Home Banner -->
+   <div class="home">
+
+      <div class="right">
+         <h1>A New Stnadard <br> of Grooming</h1>
+         <p>Classic Cuts Modern Style Premium Experience <br>Redefining confidence one cut at a time</p>
+         <div>
+            <button>Book Appointment</button>
+            <button>Explore Services</button>
+         </div>
+         <div class="review">
+
+            <div class="round">
+               <img src="./barber 1.jpg" class="a1" width="100" height="100" alt="">
+               <img src="./barber 2.jpg" class="a2" width="100" height="100" alt="">
+               <img src="./barber 3.jpg" class="a3" width="100" height="100" alt="">
+               <img src="./barber 5.jpg" class="a4" width="100" height="100" alt="">
+            </div>
+            <div class="client">
+               <p>2k+ Happy Clients</p>
+               <p>Trusted By Our COmmunity</p>
+            </div>
+         </div>
+      </div>
+
+      <div>
+         <img src="./barber 4.jpg" width="500px" height="600px" style="border-radius: 20px;">
+      </div>
+   </div>
+   <div class="ten">
+      <h2 style="text-align: center;">PREMIUM GROOMING</h2>
+      <div class="one">
+         <h1 style="text-align: center;">Where Style Meets Precision</h1>
+         <div class="two">
+            <div>
+               <h2>Haircut</h2>
+               <p>Classic & Modern <br>Styles</p>
+            </div>
+            <div>
+               <h2>Beard Trim</h2>
+               <p>Shope,trim & <br>define</p>
+            </div>
+            <div>
+               <h2>Shave</h2>
+               <p>Hot towel & <br>premium shave</p>
+            </div>
+            <div>
+               <h2>hair styling</h2>
+               <p>Perfect style <br>every time</p>
+            </div>
+            <div>
+               <h2>Premium Care</h2>
+               <p>Quality products <br>& core</p>
+            </div>
+         </div>
+      </div>
+      <div>
+         <div class="ben">
+            <div>
+               <h1>Crafted Cuts.</h1>
+               <h2>Confident You.</h2>
+            </div>
+            <p>From timeless classics to modern trends, <br>we teller every cut to match your style <br> and
+               personality.</p>
+         </div>
+         <div class="jack">
+            <div class="jack1">
+               Clasic Haircut clean sharp timeless.
+
+            </div>
+            <div class="jack2">
+               Beard Grooming Shape defence elevent.
+            </div>
+            <div class="jack3">
+               Hot Towel Shave Relax.
+            </div>
+            <div class="jack4">
+               Hair styling style that specks for you
+            </div>
+         </div>
+
+
+      </div>
+      <div class="dot">
+         <div class="zero" style=" width: 100%;padding: 20px;display: flex;flex-direction: column;justify-content: center;align-items: center;" >
+
+            <h1>More Than A Cut. <br> Its An Experience.</h1>
+            <p>we don't just cut hair, we build confidence. <br> Step in,relax, and leave looking your best.</p>
+            <button>Book now</button>
+         </div>
+         <div>
+            <img src="./barber 2.jpg" width="500" style="border-radius: 10px;" alt="">
+         </div>
+      </div>
+      <div class="bike">
+         <div>
+            <img src="./barber 1.jpg" width="400" style="border-radius: 10px;" alt="">
+         </div>
+         <div class="car" style=" width: 100%;padding: 20px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <p>OUR STORY</p>
+            <h1>More Than A Barber Shop, <br>It's A Culture.</h1>
+            <p>Founded on passion and precision, sharpcuts is <br> where classic techniques meet modern style, <br>
+               where here to elevote your everybody look.</p>
+            <button>learn more</button>
+         </div>
+      </div>
+      <div>
+         <div>
+            <p style="text-align: center;">WHY CHOOSE US</p>
+            <H1 style="text-align: center;">Quality You Can See, <br> Experience You Can Feel.</H1>
+         </div>
+      </div>
+      <div class="albert">
+         <div class="skylines">
+            Top Rated loved by 2k+ clerks
+
+         </div>
+         <div class="skylines2">
+            Expert Team 15+ professions at your service
+         </div>
+         <div class="skylines3">
+            Hygince First Clean tools, safe environment
+         </div>
+         <div class="skylines4">
+            premium Quality The best products for the best you
+         </div>
+      </div>
+      <div>
+         <div>
+            <p style="text-align: center;">OUR WORK</p>
+            <h2 style="text-align: center;">Fresh Cuts, Real Results.</h2>
+            <div class="albert">
+               <div class="jack1">
+
+               </div>
+               <div class="albert2">
+               </div>
+               <div class="albert3">
+               </div>
+               <div class="albert4">
+               </div>
+            </div>
+         </div>
+         <div class="ken">
+            <div>
+               <h2>2k+</h2>
+               <p>Happy Clients</p>
+            </div>
+            <div>
+               <h2>12+</h2>
+               <p>Years Experience</p>
+
+            </div>
+            <div>
+               <h2>15+</h2>
+               <p>Expert Barbers</p>
+            </div>
+            <div>
+               <h2>98%</h2>
+               <p>Satisfaction Rate</p>
+            </div>
+         </div>
+         <div class="css">
+            <div>
+               <h1>Ready For Your <br> Next Cut?</h1>
+               <p>Book your appointment today and experience <br> the difference with sharpcuts barber shop.</p>
+               <button>Book Appointment</button>
+            </div>
+         </div>
+         <footer style="background-color: black; color:white;padding: 10px;">
+
+            <div class="spi">
+               <div>
+   
+                  <h1>Sharpcuts</h1>
+                  <p>Classic cuts. Modern style. <br>premium experience. <br> Redefining confidence,<br> one cut at a
+                     time.</p>
+               </div>
+   
+   
+   
+               <div>
+                  <h3>Quick Links</h3>
+                  <a href="">Home</a><br>
+                  <a href="">About Us</a><br>
+                  <a href="">Services</a><br>
+                  <a href="">Gallery</a><br>
+                  <a href="">Contact</a><br>
+               </div>
+               <div>
+   
+                  <h3>Services</h3>
+                  <a href="">Haircut</a><br>
+                  <a href="">Beard Trim</a><br>
+                  <a href="">Shave</a><br>
+                  <a href="">Hair styling</a><br>
+                  <a href="">Premium care</a><br>
+               </div>
+               <div>
+   
+                  <h3>Information</h3>
+                  <a href="">Book Appointment</a><br>
+                  <a href="">Gift Card</a><br>
+                  <a href="">Shop Products</a><br>
+                  <a href="">FAQ</a><br>
+                  <a href="">Terms & Conditions</a><br>
+               </div>
+               <div>
+   
+                  <h3>Contact</h3>
+                  <p>123 Barber Street</p>
+                  <p>New York, NY 10001</p>
+                  <p>(123) 555-7890</p>
+                  <p>hello@sharpcuts.com</p>
+               </div>
+            </div>
+            <div style="text-align: center;">
+            &#169 2024 Sharpcuts Barber Shop. All rights reserved.
+            </div>
+         </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
